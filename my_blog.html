@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the Web Stack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+    <header>
+        <h1>What Happens When You Type <i>https://www.google.com?</i></h1>
+    </header>
+    <article>
+        <p>To answer this question, I will proceed to break 
+            down the URL; <i>https://www.google.com.</i></p>
+            <ul>
+                <li><i>https://</i> is a scheme, it is a Secure 
+                    Hypertext Transfer Protocol.</li>
+                    <li>
+                        <i>www</i> is a subdomain to <i>google.com</i> domain, it works like an 
+                        identifier or an address to the website that points to a specific 
+                        server IP address serving the website.
+                    </li>
+            </ul>
+            <br><br>
+    <div class="styled-box">
+    <p>
+        When you type <i>"https://www.google.com"</i> 
+        into your browser's address bar and hit <strong>Enter</strong>, 
+        you kick off a fascinating sequence of events 
+        that make the internet seem like magic. 
+        Let's delve into the intricate process that takes 
+        place behind the scenes, involving DNS requests, 
+        TCP/IP, firewalls, HTTPS/SSL, load balancers, 
+        web servers, application servers, and databases. 
+    </p>
+    <br><br>
+    <h3>DNS Request:</h3>
+    <p>
+        When a user types in the URL and presses enter, 
+        the journey begins with a Domain Name System (DNS) 
+        request, your browser first needs to figure out or 
+        resolves the IP address that the computer understands 
+        of the server hosting the website. 
+        It does this by performing a DNS query 
+        (also known as DNS request) where the user's 
+        computer (DNS client) asks for the IP address 
+        associated with the domain name from a 
+        DNS server (a computer server that contains a 
+        database of public IP addresses 
+        and their associated hostnames).
+    </p><img src="DNS.png" alt="browser query for IP address" class="border">
+    <br><br>
+    <h3>TCP/IP:</h3>
+    <p>
+        Once the IP address is obtained, 
+        a Transmission Control Protocol/Internet 
+        Protocol (TCP/IP) connection is established. 
+        This communication protocol ensures reliable and 
+        ordered delivery of data between your 
+        computer and <strong>Google's</strong> servers.
+    </p>
+    <img src="3way.png" alt="The TCP/IP connection" class="rounded">
+    <br><br>
+    <h3>Firewall:</h3>
+    <p>
+        Before your request reaches <strong>Google's</strong> servers, 
+        it encounters firewalls, which act as 
+        gatekeepers. Firewalls monitor and control 
+        incoming and outgoing network traffic, ensuring 
+        that only authorized data passes through. 
+        This security layer protects against unauthorized 
+        access 
+        and potential threats.
+    </p>
+    <br><br>
+    <h3>HTTPS/SSL:</h3>
+    <p>
+        The data exchange between your browser 
+        and <strong>Google</strong> is secured through the use of 
+        HTTPS (Hypertext Transfer Protocol Secure) 
+        and SSL (Secure Sockets Layer) encryption. 
+        This encryption safeguards the information 
+        exchanged from eavesdroppers and ensures 
+        the integrity and authenticity of 
+        the communication.
+    </p>
+    <br><br>
+    <h3>Load Balancer:</h3>
+    <p>
+        Large-scale websites like <strong>Google </strong>
+        often use load balancers to distribute 
+        incoming network traffic across multiple 
+        servers. This ensures optimal resource 
+        utilization, prevents server overload, 
+        and enhances the website's performance. 
+        Load balancers contribute to a seamless user 
+        experience by efficiently
+         managing the incoming requests.
+    </p>
+    <br><br>
+    <h3>Web Server:</h3>
+    <p>
+        Upon passing through the load balancer, 
+        your request reaches a web server. 
+        Web servers, like Apache or Nginx, 
+        handle incoming requests, process them, 
+        nd generate responses. In <strong>Google's</strong> case, 
+        the web server might 
+        return the search page you requested.
+    </p>
+    <br><br>
+    <img src="webserver.png" alt="Web and Application Server">
+    <br><br>
+    <h3>Application Server:</h3>
+    <p>
+        For more dynamic content or services, 
+        the web server may communicate with an 
+        application server. Application servers, 
+        such as those running Java or PHP, execute 
+        specific tasks or processes requested by the user. 
+        In <strong>Google's</strong> scenario, this could involve complex 
+        search algorithms or personalized content generation.
+    </p>
+    <br><br>
+    <h3>Database:</h3>
+    <p>
+        For data retrieval and storage, 
+        the application server may interact with a 
+        database. <strong>Google's</strong> vast databases store indexed 
+        information, and queries from the application 
+        server retrieve the 
+        relevant data to fulfill your search request.
+    </p>
+    <br><br>
+    <p><strong>Below is a pictorial description 
+        of <i>what happens when you type url browser and press enter</i></strong></p>
+    <img src="whathappens.gif" alt="whathappensonwebbrowser" class="border">
+    <br><br>
+    </div>
+    </article>
+    <br><br>
+    <div>
+        <h2>Resources</h2>
+        <a href="https://www.linkedin.com/pulse/what-happens-when-you-type-url-browser-press-enter-navarro-mill%C3%A1n/">
+            This is a resource link to linkedin
+        </a>
+        <br><br>
+        <a href="https://youtu.be/vvpCnjyjTuU">This is a youtube link</a>
+        <br><br>
+        <a href="https://aws.amazon.com/blogs/mobile/what-happens-when-you-type-a-url-into-your-browser/#:~:text=After%20you%27ve%20typed%20the,this%20using%20a%20DNS%20lookup.">by AWS blogs</a>
+        <br><br>
+    </di>
+    <footer>
+        <p>&copy; 2023 Jordan Mefujie.</p>
+    </footer>
+    </div>
+</body>
+</html>
